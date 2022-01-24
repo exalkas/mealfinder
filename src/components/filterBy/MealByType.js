@@ -4,23 +4,6 @@ import axios from 'axios'
 import styled from 'styled-components';
 import Footer from '../footer';
 
-// Tag templates
-
-// let className = 'E06-1'
-// let students = 18
-// let teachers = 2 
-
-// console.log(`The class name is ${className} has ${students} students and ${teachers} teachers`)
-
-// function showClassDetails(string, ...restParams) {
-    
-//     console.log('show class string:', string)
-//     console.log('show class rest:', restParams)
-// }
-
-// showClassDetails`The class name is ${className} has ${students} students and ${teachers} teachers`
-// showClassDetails(`The class name is ${className} has ${students} students and ${teachers} teachers`)
-
 const CatComponent = styled.div`
     display: flex;
     justify-content: center;
@@ -35,9 +18,6 @@ const Image = styled.img`
     border-radius: 4px;
     padding: 5px;
 `
-
-
-
 const Meal = styled.div`
     background: lightPink;
     color: black;
@@ -54,9 +34,6 @@ const Title = styled.p`
     text-align: center;
     padding: 0 10px;
 `
-
-
-
 export default function MealCat() {
 
     const history = useHistory();
@@ -64,21 +41,17 @@ export default function MealCat() {
     const {meal} = useParams();
     const [meals, setMeals] = useState([])
 
-
     useEffect(() => {
 
         const getData = async () => {
             const response = await axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?c=' + meal)
-
-           
-
             console.log('reponse is', response)
 
             setMeals([...response.data.meals])
         }
 
         getData()
-    }, [])
+    }, [meal])
 
     const handleClick = id => history.push('/meals/' + meal + '/' + id)
 

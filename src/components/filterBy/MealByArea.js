@@ -44,16 +44,14 @@ export default function MealCat() {
 
     const history = useHistory();
 
-    const {area} = useParams();
     const [areas, setAreas] = useState([])
-
-
+    const {area} = useParams();
+    
     useEffect(() => {
-
+        
         const getData = async () => {
+            
             const response = await axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?a=' + area)
-
-           
 
             console.log('reponse is', response)
 
@@ -61,7 +59,7 @@ export default function MealCat() {
         }
 
         getData()
-    }, [])
+    }, [area])
 
     const handleClick = id => history.push('/meals/' + area + '/' + id)
 

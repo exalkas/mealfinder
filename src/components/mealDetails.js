@@ -65,7 +65,7 @@ export default function MealDetails() {
         }
 
         getData();
-    }, [])
+    }, [id])
 
     return <>
         <H2 align='center'>{details.strMeal}</H2>

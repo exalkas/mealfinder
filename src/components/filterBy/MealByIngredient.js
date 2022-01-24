@@ -4,23 +4,6 @@ import axios from 'axios'
 import styled from 'styled-components';
 import Footer from '../footer';
 
-// Tag templates
-
-// let className = 'E06-1'
-// let students = 18
-// let teachers = 2 
-
-// console.log(`The class name is ${className} has ${students} students and ${teachers} teachers`)
-
-// function showClassDetails(string, ...restParams) {
-    
-//     console.log('show class string:', string)
-//     console.log('show class rest:', restParams)
-// }
-
-// showClassDetails`The class name is ${className} has ${students} students and ${teachers} teachers`
-// showClassDetails(`The class name is ${className} has ${students} students and ${teachers} teachers`)
-
 const CatComponent = styled.div`
     display: flex;
     justify-content: center;
@@ -54,9 +37,6 @@ const Title = styled.p`
     text-align: center;
     padding: 0 10px;
 `
-
-
-
 export default function MealCat() {
 
     const history = useHistory();
@@ -69,16 +49,13 @@ export default function MealCat() {
 
         const getData = async () => {
             const response = await axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?i=' + ingredient)
-
-           
-
             console.log('reponse is', response)
 
             setIngredients([...response.data.meals])
         }
 
         getData()
-    }, [])
+    }, [ingredient])
 
     const handleClick = id => history.push('/meals/' + ingredient + '/' + id)
 
