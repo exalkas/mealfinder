@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.34f93a8e.css",
-    "main.js": "/static/js/main.8780d478.js",
-    "index.html": "/index.html",
-    "main.34f93a8e.css.map": "/static/css/main.34f93a8e.css.map",
-    "main.8780d478.js.map": "/static/js/main.8780d478.js.map"
+    "main.css": "/exalkas/mealfinder/static/css/main.34f93a8e.css",
+    "main.js": "/exalkas/mealfinder/static/js/main.c9cb01cb.js",
+    "index.html": "/exalkas/mealfinder/index.html",
+    "main.34f93a8e.css.map": "/exalkas/mealfinder/static/css/main.34f93a8e.css.map",
+    "main.c9cb01cb.js.map": "/exalkas/mealfinder/static/js/main.c9cb01cb.js.map"
   },
   "entrypoints": [
     "static/css/main.34f93a8e.css",
-    "static/js/main.8780d478.js"
+    "static/js/main.c9cb01cb.js"
   ]
 }
